@@ -12,7 +12,10 @@ import ContInfo from "../layouts/ContInfo";
 class Reference extends React.Component {
     state =  {
         isLoading:true,
-        htmlRefer: []
+        htmlRefer: [],
+        cssRefer: [],
+        javascriptRefer: [],
+        tab:0
     }
 
     getRefer = async () => {
@@ -20,7 +23,25 @@ class Reference extends React.Component {
             data: {
                 data: {htmlRefer},
             },
-        } = await axios.get("https://webstoryboy.github.io/react5001/src/assets/json/refer.json");
+        } = await axios.get("https://junseungpark.github.io/react999/src/assets/json/refer.json");
+        this.setState({htmlRefer, isLoading : false} )
+        console.log(htmlRefer);
+    }
+    getCssRefer = async () => {
+        const {
+            data: {
+                data: {htmlRefer},
+            },
+        } = await axios.get("https://junseungpark.github.io/react999/src/assets/json/refer.json");
+        this.setState({htmlRefer, isLoading : false} )
+        console.log(htmlRefer);
+    }
+    getJavaRefer = async () => {
+        const {
+            data: {
+                data: {htmlRefer},
+            },
+        } = await axios.get("https://junseungpark.github.io/react999/src/assets/json/refer.json");
         this.setState({htmlRefer, isLoading : false} )
         console.log(htmlRefer);
     }
@@ -48,7 +69,11 @@ class Reference extends React.Component {
                             <div className="container">
                                 <div className="refer__cont">
                                     <div className="table">
+                                    <div className="tab">
                                     <h3>HTML</h3>
+                                    <h3>CSS</h3>
+                                    <h3>JAVASCRIPT</h3>
+                                    </div>
                                         <ul>
                                             {htmlRefer.map((refer) => (
                                                 <ReferInfo

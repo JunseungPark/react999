@@ -2,8 +2,6 @@ import React from "react";
 import Header from "../layouts/Header";
 import Contents from "../layouts/Contents";
 import Footer from "../layouts/Footer";
-import WrapTitle from "../layouts/WrapTitle";
-import ReferInfo from "../info/ReferInfo"
 import { Link } from "react-router-dom";
 import ContInfo from "../layouts/ContInfo";
 
@@ -19,7 +17,6 @@ class ReferDetail extends React.Component {
     render(){
         const {location} = this.props;
         const {title,desc1,desc2,element,tag,version,use,definition,view} = this.props.location.state.refer;
-        console.log(location);
         return (
             location.state
             ? (

@@ -92,9 +92,12 @@
     .table {
         border-bottom: 2px solid #000;
         margin-top: 1.2rem;
-        
-        h3 {
-            padding-bottom: 10px;
+        .tab {
+            display: flex;
+            gap: 20px;
+            h3 {
+                padding-bottom: 10px;
+            }
         }
         ul {
             border-top: 1px solid #fff;
@@ -246,4 +249,52 @@
 #youtubeCont {
     background-color: #000;
     color: #fff;
+}
+
+.youtube {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 200px;
+    div{
+        flex: 0 0 19%;
+
+        .title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            font-family: "S-CoreDream-3Light";
+            margin: 10px 0 30px;
+        }
+        
+        img {
+            object-fit: cover;
+        }
+    }
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+    input {
+        flex: 0 0 79%;
+        background: transparent;
+        border: 1px solid #fff;
+        font-family: "S-CoreDream-3Light";
+        padding: 15px 10px;
+        outline: #fff;
+        color: #fff;
+        &::placeholder {
+            color: #fff;
+        }
+    }
+    button {
+        flex: 0 0 20%;
+        font-family: "S-CoreDream-3Light";
+        background: #fff;
+        border: 1px solid #fff;
+    }
 }

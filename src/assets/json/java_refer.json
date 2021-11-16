@@ -1,0 +1,187 @@
+{
+    "data": {
+      "type": "html",
+      "javarefer": [
+        {
+          "type": "Javascript",
+          "id": 1,
+          "title": "변수",
+          "desc": "변수는 변하는 데이터 값을 저장할 수 있는 메모리 공간입니다.",
+          "category": "var 변수명 = 값;",
+          "property": "지역변수, 전역변수, 매개변수, 멤버변수",
+          "element": "변수 선언에는 var, let, const 3가지의 선언 방법이 있습니다."
+        },
+        {
+          "type": "Javascript",
+          "id": 2,
+          "title": "문자형 변수",
+          "desc": "문자형 데이터는 문자나 숫자를 큰따옴표또는 작은따옴표로 감싸고 있습니다.",
+          "category": "var 변수명 = '문자'",
+          "property": "문자형, 숫자형, 논리형, TYPEOF",
+          "element": "문자형 데이터에 HTML 태그를 포함하여 출력하면 태그로 인식합니다."
+        },
+        {
+          "type": "Javascript",
+          "id": 3,
+          "title": "숫자형 변수",
+          "desc": "숫자형 데이터는 단어 의미 그대로 숫자를 의미합니다.",
+          "category": "var 변수명 = 12345",
+          "property": "문자형, 숫자형, 논리형, TYPEOF",
+          "element": "'100'과 같이 큰따옴표가 숫자를 감싸고 있다면 숫자가 아닌 문자형 데이터입니다."
+        },
+        {
+          "type": "Javascript",
+          "id": 4,
+          "title": "배열",
+          "desc": "배열은 여러개의 데이터를 순차적으로 저장하는 저장소입니다.",
+          "category": "var 변수명 = [값1, 값2, 값3......]",
+          "property": "forEach, for in문, for of문, 배열 비구조화 할당",
+          "element": "배열에 담겨있는 값을 가져올 때는 대괄호 안에 숫자를 넣는다. 이 숫자를 색인(index)라고 부르고 0부터 시작한다."
+        },
+        {
+          "type": "Javascript",
+          "id": 5,
+          "title": "산술연산자",
+          "desc": "산술 연산자에는 더하기(+), 빼기(-), 곱하기(*), 나누기(/), 나머지(%)가 있습니다. ",
+          "category": "A+B, A-B, A*B, A/B, A%B",
+          "property": "산술연산자, 대입연산자, 증감연산자, 비교연산자, 논리연산자",
+          "element": "산술 연산자로 연산을 하기 위해서는 연산 대상 데이터가 반드시 2개 있어야 합니다."
+        },
+        {
+          "type": "Javascript",
+          "id": 6,
+          "title": "대입연산자",
+          "desc": "대입 연산자(=)는 연산된 데이터를 변수에 저장할 때 사용합니다.",
+          "category": "A=B, A+=B, A*=B, A/=B, A%=B",
+          "property": "산술연산자, 대입연산자, 증감연산자, 비교연산자, 논리연산자",
+          "element": "복합 대입 연산자(+=, -=, *=, /=, %=)는 산술 연산자와 대입 연산자가 복합적으로 적용된 것을 의미합니다."
+        },
+        {
+          "type": "Javascript",
+          "id": 7,
+          "title": "증감연산자",
+          "desc": "증감 연산자에는 숫자형 데이터를 1씩 증가시키는 증가 연산자(++)와 반대로 1씩 감소시키는 감소 연산자(--)가 있습니다.",
+          "category": "num++; num--; ++num; --num;",
+          "property": "산술연산자, 대입연산자, 증감연산자, 비교연산자, 논리연산자",
+          "element": "증감 연산자는 변수의 어느 위치에 오는가에 따라 결괏값이 달라집니다."
+        },
+        {
+          "type": "Javascript",
+          "id": 8,
+          "title": "비교연산자",
+          "desc": "두 데이터를 '크다, 작다, 같다'와 같이 비교할 때 사용하는 연산자입니다.",
+          "category": "x==y, x===y, x!=y, x!==y, x>y, x<y, x>=y, x<=y",
+          "property": "산술연산자, 대입연산자, 증감연산자, 비교연산자, 논리연산자",
+          "element": "연산된 결괏값은 true(참) 또는 false(거짓)로 논리형 데이터를 반환합니다."
+        },
+        {
+          "type": "Javascript",
+          "id": 9,
+          "title": "논리연산자",
+          "desc": "논리 연산자에는 ||(or), &&(and), !(not)이 있습니다.",
+          "category": "x&&y, x||y, !x",
+          "property": "산술연산자, 대입연산자, 증감연산자, 비교연산자, 논리연산자",
+          "element": "논리 연산자는 피연산자가 논리형 데이터인 true 또는 false로 결괏값을 반환합니다."
+        },
+        {
+          "type": "Javascript",
+          "id": 10,
+          "title": "if문",
+          "desc": "if문은 조건식을 만족(true)할 경우에만 코드를 실행합니다.",
+          "category": "if(조건식){ //실행코드}",
+          "property": "if문, if~else문, 다중 if문, 중첩 if문, swich문, 삼항 연산자",
+          "element": "0, null, ''(빈문자), undefined가 조건식에 입력되면 false를 반환합니다."
+        },
+        {
+          "type": "Javascript",
+          "id": 11,
+          "title": "if~else문",
+          "desc": "else문은 조건식을 만족할(true) 경우와 만족하지 않은(false)경우에 따라 실행되는 코드가 달라집니다.",
+          "category": "if(조건식){ //true일 때 실행 코드}else{ //false일 떄 실행 코드}",
+          "property": "if문, if~else문, 다중 if문, 중첩 if문, swich문, 삼항 연산자",
+          "element": "다중의 if~else 문은 else if 절을 만들기 위해 중첩될 수 있습니다."
+        },
+        {
+          "type": "Javascript",
+          "id": 12,
+          "title": "다중 if문",
+          "desc": "다중 if문은 두 가지 이상의 조건식과 정해 놓은 조건을 만족하지 않았을 때 실행되는 코드로 이루어져 있습니다.",
+          "category": "if(조건식1){ //true일 때 실행 코드}else if(조건식2){ //앞 조건이 거짓일 때 실행코드}else{ //앞의 모든 조건이 거짓일 때 실행코드}",
+          "property": "if문, if~else문, 다중 if문, 중첩 if문, swich문, 삼항 연산자",
+          "element": "조건을 계속 설정할 수 있으며, 마지막에는 조건식을 쓰지 않습니다."
+        },
+        {
+          "type": "Javascript",
+          "id": 13,
+          "title": "중첩 if문",
+          "desc": "중첩 if문은 if문 안에  if문이 오는 구조입니다.",
+          "category": "if(조건식1){if(조건식2)}{ //실행문}}",
+          "property": "if문, if~else문, 다중 if문, 중첩 if문, swich문, 삼항 연산자",
+          "element": "if문이 들어갈 수 있는 갯수에 대해서는 제한이 없습니다."
+        },
+        {
+          "type": "Javascript",
+          "id": 14,
+          "title": "swich문",
+          "desc": "swich문은 해당 조건에 맞는 case를 구분해서 수행하는 제어문입니다.",
+          "category": "let 변수=초기값; switch(조건을 체크할 변수){case 값1; //조건을 체크할 변수가 값1을 가지면 실행 break;}",
+          "property": "if문, if~else문, 다중 if문, 중첩 if문, swich문, 삼항 연산자",
+          "element": "switch문은 if문처럼 조건식이 <,<=,>,>=와 같은 이상,이하,초과,미만같은 부등식이 사용될 수 없습니다."
+        },
+        {
+          "type": "Javascript",
+          "id": 15,
+          "title": "삼항 연산자",
+          "desc": "조건부 연산자는 조건을 처리하는  if문의 다른 형태 제어문입니다.",
+          "category": "(조건) ? (참일 때 실행코드) : (거짓일 때 실행코드);",
+          "property": "if문, if~else문, 다중 if문, 중첩 if문, swich문, 삼항 연산자",
+          "element": "삼항연산자는 if~else문으로 변환시킬 수 있습니다."
+        },
+        {
+          "type": "Javascript",
+          "id": 16,
+          "title": "while문",
+          "desc": "while문은 조건식을 만족할 때까지 코드를 여러 회 반복하여 실행할 수 있습니다.",
+          "category": "var 변수=초깃값; while(조건식){실행문; 증감식;}",
+          "property": "while문, do while문, for문, 중첩 for문, break문, continue문",
+          "element": "증감식을 넣지 않으면 무한대로 진행됩니다."
+        },
+        {
+          "type": "Javascript",
+          "id": 17,
+          "title": "do while문",
+          "desc": "do while문은 반드시 한번은 코드를 실행하고 조건식을 검사합니다.",
+          "category": "var 변수=초깃값; do{실행문; 증감식;} while(조건식);",
+          "property": "while문, do while문, for문, 중첩 for문, break문, continue문",
+          "element": "기존 while문과 순서의 차이를 가진다고 볼 수 있습니다."
+        },
+        {
+          "type": "Javascript",
+          "id": 18,
+          "title": "for문",
+          "desc": "for문은 조건식을 만족할 때까지 특정 코드를 반복해서 실행합니다.",
+          "category": "for(초깃값; 조건식; 증감식){ //반복 코드}",
+          "property": "while문, do while문, for문, 중첩 for문, break문, continue문",
+          "element": "사용 방법은 while문과 같지만 while문보다 사용하기 편해 사용 빈도가 높은 편입니다."
+        },
+        {
+          "type": "Javascript",
+          "id": 19,
+          "title": "중첩 for문",
+          "desc": "for문 안에 for문을 사용한 것을 중첩 for문이라고 합니다.",
+          "category": "for(초깃값; 조건식; 증감식;){for(초깃값; 조건식; 증감식;){ //반복 코드}}",
+          "property": "while문, do while문, for문, 중첩 for문, break문, continue문",
+          "element": "중첩의 횟수는 제한이 없습니다."
+        },
+        {
+          "type": "Javascript",
+          "id": 20,
+          "title": "함수",
+          "desc": "함수는 하나의 실행문을 저장하고 변수는 하나의 데이터를 저장하여 사용합니다.",
+          "category": "-",
+          "property": "재귀 함수, 콜백 함수, 내부 함수, 객체 생성자 함수, 프로토타입 함수, 화살표 함수...",
+          "element": "반복되는 실행문을 나타낼 때 코드를 간결화 시키면서 편리하게 사용할 수 있다는 장점이 있습니다."
+        }
+      ]
+    }
+  }

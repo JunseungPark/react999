@@ -18,6 +18,7 @@ class Reference extends React.Component {
         cssRefer: [],
         javascriptRefer: [],
         tab: "",
+        active:""
     }
 
     getRefer = async () => {
@@ -75,15 +76,15 @@ class Reference extends React.Component {
                     <Header></Header>
                     <Contents>
                         <section id="referCont">
-                            <WrapTitle text={['REFERENCE','BOOK']}></WrapTitle>
                             <div className="container">
+                            <WrapTitle text={['REFERENCE','BOOK']}></WrapTitle>
                                 <div className="refer__cont">
                                     <div className="table">
-                                    <div className="tab">
-                                        <h3 onClick={() => this.tabEvent(0)} >HTML</h3>
-                                        <h3 onClick={() => this.tabEvent(1)} >CSS</h3>
-                                        <h3 onClick={() => this.tabEvent(2)} >JAVASCRIPT</h3>
-                                    </div>
+                                    <ul className="tab">
+                                        <li onClick={() => this.tabEvent(0)} >{tab == 0 ?(<a className="active">HTML</a>):(<a>HTML</a>)}</li>
+                                        <li onClick={() => this.tabEvent(1)} >{tab == 1 ?(<a className="active">CSS</a>):(<a>HTML</a>)}</li>
+                                        <li onClick={() => this.tabEvent(2)} >{tab == 2 ?(<a className="active">JAVASCRIPT</a>):(<a>HTML</a>)}</li>
+                                    </ul>
                                     {tab == 0 ? (
                                         <ul>
                                             {htmlRefer.map((refer) => (
@@ -115,7 +116,6 @@ class Reference extends React.Component {
                                             ))}
                                         </ul>
                                     ))}
-
                                     </div>
                                 </div>
                             </div>

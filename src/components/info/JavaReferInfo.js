@@ -9,7 +9,7 @@ function JavaReferInfo({javaRefer}) {
                 <span className="num">{javaRefer.id}</span>
                 <span className="attr">{javaRefer.title}</span>
                 <span className="desc">{javaRefer.desc}</span>
-                <span className="Inline">{javaRefer.element}</span>
+                {/* <span className="Inline">{javaRefer.category}</span> */}
             </Link>
         </li>
     )

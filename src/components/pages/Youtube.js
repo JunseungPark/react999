@@ -6,12 +6,15 @@ import YoutubeList from "../info/YoutubeList"
 import YoutubeSearch from "../info/YoutubeSearch";
 import Loading from "../layouts/Loading";
 import {gsap} from "gsap";
+import dotenv from "dotenv";
 
 function Youtube() {
 
     const [videos, setVideos] = useState([]); 
     const [search, setSearch] = useState([]); 
-    const [state, setState] = useState([]); 
+    const [state, setState] = useState([]);
+    dotenv.config();
+    const API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 
     const start = () => {
         setTimeout(()=>{
@@ -47,7 +50,7 @@ function Youtube() {
 
     }
 
-
+    // start();
     const onClick = (e) => {
     }
     const data = async () => {
@@ -56,18 +59,17 @@ function Youtube() {
             redirect: 'follow'
           };
           
-         await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${search}&key=AIzaSyAJiUj3YmKxAzZ_Ks8Vswf9TpPnxqw5d3M&maxResults=5&type=video`, requestOptions)
+         await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${search}&key=${API_KEY}&maxResults=5&type=video`, requestOptions)
             .then(response => response.json())
             .then(result => {
                 setVideos(result.items);
-                start();
             })
             .catch(error => console.log('error', error));
     }
     
     return (
         <div>
-            <Loading></Loading>
+            {/* <Loading></Loading> */}
             <Header></Header>
             <Contents>
                 <section id="youtubeCont">

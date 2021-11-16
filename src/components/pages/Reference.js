@@ -25,31 +25,33 @@ class Reference extends React.Component {
             },
         } = await axios.get("https://junseungpark.github.io/react999/src/assets/json/refer.json");
         this.setState({htmlRefer, isLoading : false} )
-        console.log(htmlRefer);
+        console.log(htmlRefer +"1");
     }
     getCssRefer = async () => {
         const {
             data: {
-                data: {htmlRefer},
+                data: {cssRefer},
             },
-        } = await axios.get("https://junseungpark.github.io/react999/src/assets/json/refer.json");
-        this.setState({htmlRefer, isLoading : false} )
-        console.log(htmlRefer);
+        } = await axios.get("https://junseungpark.github.io/react999/src/assets/json/css_refer.json");
+        this.setState({cssRefer, isLoading : false} )
+        console.log(cssRefer +"2");
     }
     getJavaRefer = async () => {
         const {
             data: {
-                data: {htmlRefer},
+                data: {javascriptRefer},
             },
-        } = await axios.get("https://junseungpark.github.io/react999/src/assets/json/refer.json");
-        this.setState({htmlRefer, isLoading : false} )
-        console.log(htmlRefer);
+        } = await axios.get("https://junseungpark.github.io/react999/src/assets/json/java_refer.json");
+        this.setState({javascriptRefer, isLoading : false} )
+        console.log(javascriptRefer +"3");
     }
 
 
     componentDidMount() {
         setTimeout(()=>{
             this.getRefer();
+            this.getCssRefer();
+            this.getJavaRefer();
         }, 2000)
     }
 

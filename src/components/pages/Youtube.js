@@ -5,15 +5,14 @@ import Header from "../layouts/Header";
 import YoutubeList from "../info/YoutubeList"
 import YoutubeSearch from "../info/YoutubeSearch";
 import Loading from "../layouts/Loading";
+import firebase from "../../firebase";
 import {gsap} from "gsap";
-import dotenv from "dotenv";
 
 function Youtube() {
 
     const [videos, setVideos] = useState([]); 
     const [search, setSearch] = useState([]); 
     const [state, setState] = useState([]);
-    dotenv.config();
     const API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 
     const start = () => {

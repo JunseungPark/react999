@@ -5,7 +5,9 @@ import Footer from "../layouts/Footer";
 import Header from "../layouts/Header";
 import Loading from "../layouts/Loading";
 import WrapTitle from "../layouts/WrapTitle";
-import ReferInfo from "../info/ReferInfo"
+import ReferInfo from "../info/ReferInfo";
+import CssReferInfo from "../info/CssReferInfo";
+import JavaReferInfo from "../info/JavaReferInfo";
 import ContInfo from "../layouts/ContInfo";
 
 
@@ -15,7 +17,7 @@ class Reference extends React.Component {
         htmlRefer: [],
         cssRefer: [],
         javascriptRefer: [],
-        tab:0
+        tab: "",
     }
 
     getRefer = async () => {
@@ -25,7 +27,7 @@ class Reference extends React.Component {
             },
         } = await axios.get("https://junseungpark.github.io/react999/src/assets/json/refer.json");
         this.setState({htmlRefer, isLoading : false} )
-        console.log(htmlRefer +"1");
+        console.log(htmlRefer);
     }
     getCssRefer = async () => {
         const {
@@ -34,7 +36,7 @@ class Reference extends React.Component {
             },
         } = await axios.get("https://junseungpark.github.io/react999/src/assets/json/css_refer.json");
         this.setState({cssRefer, isLoading : false} )
-        console.log(cssRefer +"2");
+        console.log(cssRefer);
     }
     getJavaRefer = async () => {
         const {
@@ -43,7 +45,7 @@ class Reference extends React.Component {
             },
         } = await axios.get("https://junseungpark.github.io/react999/src/assets/json/java_refer.json");
         this.setState({javascriptRefer, isLoading : false} )
-        console.log(javascriptRefer +"3");
+        console.log(javascriptRefer);
     }
 
 
@@ -55,8 +57,14 @@ class Reference extends React.Component {
         }, 2000)
     }
 
+    tabEvent(e) {
+        this.setState({tab : e})
+        console.log(e);
+    }
+
+
     render(){
-        const {isLoading, htmlRefer} = this.state;
+        const {isLoading, htmlRefer, javascriptRefer, cssRefer, tab} = this.state;
 
         return (
             <div>
@@ -72,10 +80,11 @@ class Reference extends React.Component {
                                 <div className="refer__cont">
                                     <div className="table">
                                     <div className="tab">
-                                    <h3>HTML</h3>
-                                    <h3>CSS</h3>
-                                    <h3>JAVASCRIPT</h3>
+                                        <h3 onClick={() => this.tabEvent(0)} >HTML</h3>
+                                        <h3 onClick={() => this.tabEvent(1)} >CSS</h3>
+                                        <h3 onClick={() => this.tabEvent(2)} >JAVASCRIPT</h3>
                                     </div>
+                                    {tab == 0 ? (
                                         <ul>
                                             {htmlRefer.map((refer) => (
                                                 <ReferInfo
@@ -85,6 +94,28 @@ class Reference extends React.Component {
                                                 </ReferInfo>
                                             ))}
                                         </ul>
+                                    ) : ( tab == 1 ? (
+                                        <ul>
+                                            {cssRefer.map((refer) => (
+                                                <CssReferInfo
+                                                key = {refer.id}
+                                                cssRefer = {refer}
+                                                >
+                                                </CssReferInfo>
+                                            ))}
+                                        </ul>
+                                    ):(
+                                        <ul>
+                                            {javascriptRefer.map((refer) => (
+                                                <JavaReferInfo
+                                                key = {refer.id}
+                                                javaRefer = {refer}
+                                                >
+                                                </JavaReferInfo>
+                                            ))}
+                                        </ul>
+                                    ))}
+
                                     </div>
                                 </div>
                             </div>

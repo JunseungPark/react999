@@ -121,6 +121,9 @@
                 font-size: 14px;
                 font-family: "S-CoreDream-3Light";
                 box-sizing: border-box;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 
                 &:nth-child(1) {
                     width: 5%;

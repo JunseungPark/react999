@@ -17,7 +17,7 @@ class ReferDetail extends React.Component {
 
     render(){
         const {location} = this.props;
-        const {title,desc1,desc2,element,tag,version,use,definition,view} = this.props.location.state.refer;
+        const {title,desc1,desc2,element,tag,version,use,definition,view} = this.props.location.state.cssRefer;
         return (
             location.state
             ? (
@@ -38,20 +38,16 @@ class ReferDetail extends React.Component {
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <th>요소</th>
+                                                <th>기본 값</th>
                                                 <td>{element}</td>
                                             </tr>
                                             <tr>
-                                                <th>닫는 태그</th>
+                                                <th>적용</th>
                                                 <td>{tag}</td>
                                             </tr>
                                             <tr>
                                                 <th>버전</th>
                                                 <td>{version}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>시각적 표현</th>
-                                                <td>{view}</td>
                                             </tr>
                                             <tr>
                                                 <th>사용성</th>

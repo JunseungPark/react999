@@ -9,10 +9,10 @@
           "title": "align-content",
           "desc1": "align-content 속성은 콘텐츠 아이템의 상하관계 정렬 상태를 설정합니다.",
           "desc2": "align-content 속성은 콘텐츠 아이템의 상하관계 정렬 상태를 설정합니다.",
-          "element": "(기본값)align-content : stretch",
-          "tag": "(적용)flexbox",
-          "version": "(버전)CSS3",
-          "use": "(사용성)★★★",
+          "element": "align-content : stretch",
+          "tag": "flexbox",
+          "version": "CSS3",
+          "use": "★★★",
           "definition": [
               "align-content 속성은 콘텐츠 아이템의 상하관계 정렬 상태를 설정합니다.",
               "align-content 속성은 한 줄(flex-wrap: nowrap)에서는 의미가 없습니다."
@@ -73,7 +73,7 @@
               "title": "animation",
               "desc1": "애니메이션은 움직임 시간, 움직임 지연 시간, 움직임 방향, 움직임 속도, 움직임 진행상태, 움직임 반복 횟수, 움직임 진행상태, 움직임 속도, 키프레임 이름 등을 설정하여 원하는 애니메이션을 구현 할 수 있습니다.",
               "desc2": "animation 속성은 애니메이션과 관련된 속성을 일괄적으로 설정합니다.",
-              "element": "animation-name: none;, animation-duration: 0s;, animation-timing-function: ease;, animation-delay: 0s;, animation-iteration-count: 1;, animation-direction: normal;, animation-fill-mode: none;, animation-play-state: running;",
+              "element": "animation-name: none;",
               "tag": "(상속)안됨",
               "version": "CSS3",
               "use": "★★★",

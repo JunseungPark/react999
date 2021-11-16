@@ -8,6 +8,8 @@ import Youtube from './components/pages/Youtube'
 import Contact from './components/pages/Contact'
 import Portfolio from './components/pages/Portfolio'
 import ReferDetail from './components/pages/ReferDetail'
+import CssReferDetail from './components/pages/CssReferDetail'
+import JavaReferDetail from './components/pages/JavaReferDetail'
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Route path='/about' component={About}></Route>
       <Route path='/reference' component={Reference}></Route>
       <Route path='/refer-detail' component={ReferDetail}></Route>
+      <Route path='/css-refer-detail' component={CssReferDetail}></Route>
+      <Route path='/java-refer-detail' component={JavaReferDetail}></Route>
       <Route path='/script' component={Script}></Route>
       <Route path='/youtube' component={Youtube}></Route>
       <Route path='/contact' component={Contact}></Route>
